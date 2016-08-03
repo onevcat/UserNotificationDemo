@@ -18,6 +18,7 @@ class ViewController: UITableViewController {
         case showTimeInterval
         case showTimeIntervalForeground
         case showManagement
+        case showActionable
     }
     
     override func viewDidLoad() {
@@ -48,6 +49,7 @@ class ViewController: UITableViewController {
             }
             vc.notificationType = .timeIntervalForeground
         case .showManagement: break
+        case .showActionable: break
         
         }
     }

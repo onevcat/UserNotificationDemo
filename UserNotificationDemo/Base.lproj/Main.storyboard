@@ -114,12 +114,35 @@
                                             <segue destination="2qQ-FW-EZv" kind="show" identifier="showManagement" id="cJA-MK-KfS"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="tbN-vn-Ct2">
+                                        <rect key="frame" x="0.0" y="352" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tbN-vn-Ct2" id="n3q-5P-NtO">
+                                            <frame key="frameInset" width="342" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actions &amp; Handlers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1t-v4-PPP">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="S1t-v4-PPP" firstAttribute="leading" secondItem="n3q-5P-NtO" secondAttribute="leadingMargin" id="q5l-mo-BFa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="S1t-v4-PPP" secondAttribute="trailing" id="tJB-Wx-pCC"/>
+                                                <constraint firstItem="S1t-v4-PPP" firstAttribute="centerY" secondItem="n3q-5P-NtO" secondAttribute="centerY" id="xYw-0o-Wtw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="liC-uG-ub9" kind="show" identifier="showActionable" id="lrS-Hv-dTv"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Remote Notifications" id="XSm-xF-gfA">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="3bo-hh-3D7">
-                                        <rect key="frame" x="0.0" y="408" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="452" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3bo-hh-3D7" id="n2w-Vb-qkk">
                                             <frame key="frameInset" width="342" height="44"/>
@@ -139,13 +162,13 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="xDo-nS-VSF">
-                                        <rect key="frame" x="0.0" y="452" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="496" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xDo-nS-VSF" id="U9c-CS-fWM">
                                             <frame key="frameInset" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Management" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjl-XJ-0Nd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mutable Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjl-XJ-0Nd">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -354,6 +377,44 @@
             </objects>
             <point key="canvasLocation" x="-331.875" y="871.25"/>
         </scene>
+        <!--Actionable View Controller-->
+        <scene sceneID="51Y-aI-UNX">
+            <objects>
+                <viewController id="liC-uG-ub9" customClass="ActionableViewController" customModule="UserNotificationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qZm-MF-Z5Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="ApK-S5-17V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Jw-4H-j6w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show a notification with actions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpT-nH-xVW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16M-EN-XYv">
+                                <state key="normal" title="Tap Me"/>
+                                <connections>
+                                    <action selector="notificationButtonPressed:" destination="liC-uG-ub9" eventType="touchUpInside" id="d2D-EU-mHE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="16M-EN-XYv" firstAttribute="centerX" secondItem="8Jw-4H-j6w" secondAttribute="centerX" id="Sbx-KR-cqq"/>
+                            <constraint firstItem="16M-EN-XYv" firstAttribute="top" secondItem="WpT-nH-xVW" secondAttribute="bottom" constant="16" id="h4g-5e-qAx"/>
+                            <constraint firstItem="WpT-nH-xVW" firstAttribute="top" secondItem="qZm-MF-Z5Q" secondAttribute="bottom" constant="20" id="p6K-nJ-DCM"/>
+                            <constraint firstItem="WpT-nH-xVW" firstAttribute="leading" secondItem="8Jw-4H-j6w" secondAttribute="leadingMargin" id="uLn-9K-4Dk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WpT-nH-xVW" secondAttribute="trailing" id="xDJ-FD-95f"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FDz-U9-pYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312.80000000000001" y="871.21439280359823"/>
+        </scene>
         <!--Authorization-->
         <scene sceneID="iAa-kV-Oi6">
             <objects>
@@ -519,7 +580,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9B2-xK-1Th" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2" y="-138"/>
+            <point key="canvasLocation" x="-36" y="-212"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YD2-lf-31V">

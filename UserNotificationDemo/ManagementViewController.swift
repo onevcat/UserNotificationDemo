@@ -97,6 +97,8 @@ class ManagementViewController: UIViewController {
         }
     }
     
+    // This is for local notification. To update a remote notification, 
+    // you need to set the identifier as the value of `apns-collapse-id` key in an HTTP/2 request header.
     @IBAction func deliveredUpdatePressed(_ sender: AnyObject) {
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
         let identifier = UserNotificationType.pendingUpdate.rawValue

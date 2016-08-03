@@ -14,4 +14,10 @@ extension UIAlertController {
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         viewController.present(alert, animated: true)
     }
+    
+    static func showConfirmAlertFromTopViewController(message: String) {
+        if let vc = UIApplication.shared.keyWindow?.rootViewController {
+            showConfirmAlert(message: message, in: vc)
+        }
+    }
 }

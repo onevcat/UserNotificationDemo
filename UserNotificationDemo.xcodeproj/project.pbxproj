@@ -12,6 +12,7 @@
 		4B3ED4DA1D518D870082C70C /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4D91D518D870082C70C /* UIAlertControllerExtension.swift */; };
 		4B3ED4DC1D51907E0082C70C /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4DB1D51907E0082C70C /* NotificationHandler.swift */; };
 		4B3ED4E01D5196240082C70C /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4DF1D5196240082C70C /* ManagementViewController.swift */; };
+		4B4B95801D51B9E0002ECA08 /* ActionableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B957F1D51B9E0002ECA08 /* ActionableViewController.swift */; };
 		4B874F3B1D5074ED00BC7018 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B874F3A1D5074ED00BC7018 /* AuthorizationViewController.swift */; };
 		4B8E8E561D504184007BFBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8E8E551D504184007BFBAF /* AppDelegate.swift */; };
 		4B8E8E581D504184007BFBAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8E8E571D504184007BFBAF /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		4B3ED4D91D518D870082C70C /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		4B3ED4DB1D51907E0082C70C /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		4B3ED4DF1D5196240082C70C /* ManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
+		4B4B957F1D51B9E0002ECA08 /* ActionableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionableViewController.swift; sourceTree = "<group>"; };
 		4B874F3A1D5074ED00BC7018 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		4B8E8E521D504184007BFBAF /* UserNotificationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserNotificationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8E8E551D504184007BFBAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				4B874F3A1D5074ED00BC7018 /* AuthorizationViewController.swift */,
 				4B3ED4D61D518BB60082C70C /* TimeIntervalViewController.swift */,
 				4B3ED4DF1D5196240082C70C /* ManagementViewController.swift */,
+				4B4B957F1D51B9E0002ECA08 /* ActionableViewController.swift */,
 			);
 			name = DetailViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				4B3ED4DC1D51907E0082C70C /* NotificationHandler.swift in Sources */,
 				4B874F3B1D5074ED00BC7018 /* AuthorizationViewController.swift in Sources */,
 				4B3ED4DA1D518D870082C70C /* UIAlertControllerExtension.swift in Sources */,
+				4B4B95801D51B9E0002ECA08 /* ActionableViewController.swift in Sources */,
 				4B1423A71D51AC4C00BB8943 /* Delay.swift in Sources */,
 				4B8E8E581D504184007BFBAF /* ViewController.swift in Sources */,
 				4B8E8E561D504184007BFBAF /* AppDelegate.swift in Sources */,

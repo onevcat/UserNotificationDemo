@@ -6,7 +6,7 @@
 //  Copyright © 2016年 OneV's Den. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import UserNotifications
 
 enum UserNotificationType: String {
@@ -16,6 +16,18 @@ enum UserNotificationType: String {
     case pendingUpdate
     case deliveredRemoval
     case deliveredUpdate
+    case actionable
+}
+
+enum UserNotificationCategoryType: String {
+    case saySomething
+}
+
+enum SaySomethingCategoryAction: String {
+    case input
+    case hello
+    case goodbye
+    case none
 }
 
 class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
@@ -41,6 +53,8 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
             options = [.alert, .sound]
         case .deliveredUpdate:
             options = [.alert, .sound]
+        case .actionable:
+            options = [.alert, .sound]
         default:
             options = []
         }
@@ -50,6 +64,36 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
     // The method will be called on the delegate when the user responded to the notification by opening the application, dismissing the notification or choosing a UNNotificationAction. The delegate must be set before the application returns from applicationDidFinishLaunching:.
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: () -> Void) {
         
+        guard let notificationType = UserNotificationType(rawValue: response.notification.request.identifier) else {
+            completionHandler()
+            return
+        }
+        
+        
+        switch notificationType {
+        case .actionable:
+            let text: String
+            
+            if let actionType = SaySomethingCategoryAction(rawValue: response.actionIdentifier) {
+                switch actionType {
+                case .input: text = (response as! UNTextInputNotificationResponse).userText
+                case .hello: text = "Hello"
+                case .goodbye: text = "Goodbye"
+                case .none: text = ""
+                }
+            } else {
+                // Only tap or clear. (You will not receive this callback when user clear your notification unless you set .customDismissAction as the option of category)
+                text = ""
+            }
+            
+            if !text.isEmpty {
+                UIAlertController.showConfirmAlertFromTopViewController(message: "You just said \(text)")
+            }
+            
+        default: break
+        }
+        
+        completionHandler()
     }
 }
 

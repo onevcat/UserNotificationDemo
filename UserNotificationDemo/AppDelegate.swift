@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        registerNotificationCategory()
         UNUserNotificationCenter.current().delegate = notificationHandler
         return true
     }
@@ -46,6 +47,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let tokenString = deviceToken.hexString
         NotificationCenter.default.post(name: .AppDidReceivedRemoteNotificationDeviceToken, object: nil, userInfo: [Notification.Key.AppDidReceivedRemoteNotificationDeviceTokenKey: tokenString])
+    }
+    
+    private func registerNotificationCategory() {
+        
+        let saySomethingCategory: UNNotificationCategory = {
+            
+            let inputAction = UNTextInputNotificationAction(
+                identifier: SaySomethingCategoryAction.input.rawValue,
+                title: "Input",
+                options: [.foreground],
+                textInputButtonTitle: "Send",
+                textInputPlaceholder: "What do you want to say...")
+            
+            let helloAction = UNNotificationAction(
+                identifier: SaySomethingCategoryAction.hello.rawValue,
+                title: "Hello",
+                options: [.foreground])
+            
+            let goodbyeAction = UNNotificationAction(
+                identifier: SaySomethingCategoryAction.goodbye.rawValue,
+                title: "Goodbye",
+                options: [.foreground])
+            
+            let cancelAction = UNNotificationAction(
+                identifier: SaySomethingCategoryAction.none.rawValue,
+                title: "Cancel",
+                options: [.destructive])
+        
+            return UNNotificationCategory(identifier: UserNotificationCategoryType.saySomething.rawValue, actions: [inputAction, helloAction, goodbyeAction, cancelAction], intentIdentifiers: [], options: [.customDismissAction])
+        }()
+        
+        UNUserNotificationCenter.current().setNotificationCategories([saySomethingCategory])
     }
 
 }
