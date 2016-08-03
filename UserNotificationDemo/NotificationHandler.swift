@@ -19,6 +19,26 @@ enum UserNotificationType: String {
     case actionable
 }
 
+extension UserNotificationType {
+    var descriptionText: String {
+        switch self {
+        case .timeInterval: return "You need to switch to background to see the notification."
+        case .timeIntervalForeground: return "The notification will show in-app. See NotificationHandler for more."
+        default: return rawValue
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .timeInterval: return "Time"
+        case .timeIntervalForeground: return "Foreground"
+        default: return rawValue
+        }
+    }
+}
+
+
+
 enum UserNotificationCategoryType: String {
     case saySomething
 }
@@ -95,24 +115,5 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
         
         completionHandler()
     }
-}
-
-extension UserNotificationType {
-    var descriptionText: String {
-        switch self {
-        case .timeInterval: return "You need to switch to background to see the notification."
-        case .timeIntervalForeground: return "The notification will show in-app. See NotificationHandler for more."
-        default: return rawValue
-        }
-    }
-    
-    var title: String {
-        switch self {
-        case .timeInterval: return "Time"
-        case .timeIntervalForeground: return "Foreground"
-        default: return rawValue
-        }
-    }
-
 }
 
