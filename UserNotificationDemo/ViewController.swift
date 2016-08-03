@@ -11,6 +11,7 @@ import UserNotifications
 
 class ViewController: UITableViewController {
 
+    @IBOutlet weak var authorizationLabel: UILabel!
     private var settings: UNNotificationSettings?
     
     enum Segue: String {
@@ -24,7 +25,13 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        UNUserNotificationCenter.current().getNotificationSettings { self.settings = $0 }
+        UNUserNotificationCenter.current().getNotificationSettings {
+            settings in
+            if settings.authorizationStatus == .authorized {
+                self.authorizationLabel.text = "Authorized"
+            }
+            self.settings = settings
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {

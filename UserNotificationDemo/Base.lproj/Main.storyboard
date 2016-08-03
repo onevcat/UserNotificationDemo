@@ -190,6 +190,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="UserNotification" id="LRD-Gb-og0"/>
+                    <connections>
+                        <outlet property="authorizationLabel" destination="7XI-gS-Yze" id="Uqd-xk-jNQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="508-DF-iZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
