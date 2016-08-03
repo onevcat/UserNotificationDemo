@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B3ED4D71D518BB60082C70C /* TimeIntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4D61D518BB60082C70C /* TimeIntervalViewController.swift */; };
+		4B3ED4DA1D518D870082C70C /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4D91D518D870082C70C /* UIAlertControllerExtension.swift */; };
+		4B874F3B1D5074ED00BC7018 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B874F3A1D5074ED00BC7018 /* AuthorizationViewController.swift */; };
 		4B8E8E561D504184007BFBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8E8E551D504184007BFBAF /* AppDelegate.swift */; };
 		4B8E8E581D504184007BFBAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8E8E571D504184007BFBAF /* ViewController.swift */; };
 		4B8E8E5B1D504184007BFBAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8E8E591D504184007BFBAF /* Main.storyboard */; };
@@ -15,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B040A0E1D5043230037C6BF /* UserNotificationDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UserNotificationDemo.entitlements; sourceTree = "<group>"; };
+		4B3ED4D61D518BB60082C70C /* TimeIntervalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalViewController.swift; sourceTree = "<group>"; };
+		4B3ED4D91D518D870082C70C /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		4B874F3A1D5074ED00BC7018 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		4B8E8E521D504184007BFBAF /* UserNotificationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserNotificationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8E8E551D504184007BFBAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B8E8E571D504184007BFBAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +42,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B3ED4D81D518D750082C70C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4B3ED4D91D518D870082C70C /* UIAlertControllerExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		4B874F391D5074B000BC7018 /* DetailViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B874F3A1D5074ED00BC7018 /* AuthorizationViewController.swift */,
+				4B3ED4D61D518BB60082C70C /* TimeIntervalViewController.swift */,
+			);
+			name = DetailViewControllers;
+			sourceTree = "<group>";
+		};
 		4B8E8E491D504184007BFBAF = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +78,11 @@
 		4B8E8E541D504184007BFBAF /* UserNotificationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4B3ED4D81D518D750082C70C /* Extensions */,
+				4B040A0E1D5043230037C6BF /* UserNotificationDemo.entitlements */,
 				4B8E8E551D504184007BFBAF /* AppDelegate.swift */,
 				4B8E8E571D504184007BFBAF /* ViewController.swift */,
+				4B874F391D5074B000BC7018 /* DetailViewControllers */,
 				4B8E8E591D504184007BFBAF /* Main.storyboard */,
 				4B8E8E5C1D504184007BFBAF /* Assets.xcassets */,
 				4B8E8E5E1D504184007BFBAF /* LaunchScreen.storyboard */,
@@ -96,12 +123,15 @@
 				TargetAttributes = {
 					4B8E8E511D504184007BFBAF = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = QCS488Q747;
-						DevelopmentTeamName = "巍 王 (Personal Team)";
+						DevelopmentTeam = T499X543T7;
+						DevelopmentTeamName = "PU YUANYUAN";
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 						};
 					};
@@ -143,6 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B3ED4D71D518BB60082C70C /* TimeIntervalViewController.swift in Sources */,
+				4B874F3B1D5074ED00BC7018 /* AuthorizationViewController.swift in Sources */,
+				4B3ED4DA1D518D870082C70C /* UIAlertControllerExtension.swift in Sources */,
 				4B8E8E581D504184007BFBAF /* ViewController.swift in Sources */,
 				4B8E8E561D504184007BFBAF /* AppDelegate.swift in Sources */,
 			);
@@ -261,6 +294,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UserNotificationDemo/UserNotificationDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UserNotificationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.onevcat.UserNotificationDemo;
@@ -273,6 +308,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UserNotificationDemo/UserNotificationDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UserNotificationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.onevcat.UserNotificationDemo;
@@ -300,6 +337,7 @@
 				4B8E8E661D504184007BFBAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

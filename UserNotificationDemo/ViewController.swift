@@ -7,19 +7,41 @@
 //
 
 import UIKit
+import UserNotifications
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
+    private var settings: UNNotificationSettings?
+    
+    enum Segue: String {
+        case showAuthorization = "showAuthorization"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UNUserNotificationCenter.current().getNotificationSettings { self.settings = $0 }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let string = segue.identifier, let s = Segue(rawValue: string) else {
+            return
+        }
+        
+        switch s {
+        case .showAuthorization:
+            guard let vc = segue.destination as? AuthorizationViewController else {
+                fatalError("The destination should be AuthorizationViewController")
+            }
+            vc.settings = settings
+        }
     }
-
-
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: AnyObject?) -> Bool {
+        if settings == nil {
+            return false
+        }
+        return true
+    }
 }
 
