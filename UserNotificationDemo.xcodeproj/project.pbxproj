@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1423A71D51AC4C00BB8943 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1423A61D51AC4C00BB8943 /* Delay.swift */; };
 		4B3ED4D71D518BB60082C70C /* TimeIntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4D61D518BB60082C70C /* TimeIntervalViewController.swift */; };
 		4B3ED4DA1D518D870082C70C /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4D91D518D870082C70C /* UIAlertControllerExtension.swift */; };
+		4B3ED4DC1D51907E0082C70C /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4DB1D51907E0082C70C /* NotificationHandler.swift */; };
+		4B3ED4E01D5196240082C70C /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4DF1D5196240082C70C /* ManagementViewController.swift */; };
 		4B874F3B1D5074ED00BC7018 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B874F3A1D5074ED00BC7018 /* AuthorizationViewController.swift */; };
 		4B8E8E561D504184007BFBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8E8E551D504184007BFBAF /* AppDelegate.swift */; };
 		4B8E8E581D504184007BFBAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8E8E571D504184007BFBAF /* ViewController.swift */; };
@@ -19,8 +22,11 @@
 
 /* Begin PBXFileReference section */
 		4B040A0E1D5043230037C6BF /* UserNotificationDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UserNotificationDemo.entitlements; sourceTree = "<group>"; };
+		4B1423A61D51AC4C00BB8943 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		4B3ED4D61D518BB60082C70C /* TimeIntervalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalViewController.swift; sourceTree = "<group>"; };
 		4B3ED4D91D518D870082C70C /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		4B3ED4DB1D51907E0082C70C /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		4B3ED4DF1D5196240082C70C /* ManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
 		4B874F3A1D5074ED00BC7018 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		4B8E8E521D504184007BFBAF /* UserNotificationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserNotificationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8E8E551D504184007BFBAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				4B3ED4D91D518D870082C70C /* UIAlertControllerExtension.swift */,
+				4B1423A61D51AC4C00BB8943 /* Delay.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -55,6 +62,7 @@
 			children = (
 				4B874F3A1D5074ED00BC7018 /* AuthorizationViewController.swift */,
 				4B3ED4D61D518BB60082C70C /* TimeIntervalViewController.swift */,
+				4B3ED4DF1D5196240082C70C /* ManagementViewController.swift */,
 			);
 			name = DetailViewControllers;
 			sourceTree = "<group>";
@@ -82,6 +90,7 @@
 				4B040A0E1D5043230037C6BF /* UserNotificationDemo.entitlements */,
 				4B8E8E551D504184007BFBAF /* AppDelegate.swift */,
 				4B8E8E571D504184007BFBAF /* ViewController.swift */,
+				4B3ED4DB1D51907E0082C70C /* NotificationHandler.swift */,
 				4B874F391D5074B000BC7018 /* DetailViewControllers */,
 				4B8E8E591D504184007BFBAF /* Main.storyboard */,
 				4B8E8E5C1D504184007BFBAF /* Assets.xcassets */,
@@ -173,9 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B3ED4E01D5196240082C70C /* ManagementViewController.swift in Sources */,
 				4B3ED4D71D518BB60082C70C /* TimeIntervalViewController.swift in Sources */,
+				4B3ED4DC1D51907E0082C70C /* NotificationHandler.swift in Sources */,
 				4B874F3B1D5074ED00BC7018 /* AuthorizationViewController.swift in Sources */,
 				4B3ED4DA1D518D870082C70C /* UIAlertControllerExtension.swift in Sources */,
+				4B1423A71D51AC4C00BB8943 /* Delay.swift in Sources */,
 				4B8E8E581D504184007BFBAF /* ViewController.swift in Sources */,
 				4B8E8E561D504184007BFBAF /* AppDelegate.swift in Sources */,
 			);

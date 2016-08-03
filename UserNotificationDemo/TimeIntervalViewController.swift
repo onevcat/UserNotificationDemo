@@ -11,7 +11,16 @@ import UserNotifications
 
 class TimeIntervalViewController: UIViewController {
     
+    var notificationType: UserNotificationType!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var timeTextField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = notificationType.title
+        descriptionLabel.text = notificationType.descriptionText
+    }
     
     @IBAction func scheduleButtonPressed(_ sender: AnyObject) {
         guard let text = timeTextField.text, let timeInterval = TimeInterval(text) else {
@@ -28,7 +37,7 @@ class TimeIntervalViewController: UIViewController {
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
         
         // Create an identifier for this notification. So you could manage it later.
-        let requestIdentifier = "timeIntervalNotification"
+        let requestIdentifier = notificationType.rawValue
         
         // The request describes this notification.
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
@@ -36,8 +45,9 @@ class TimeIntervalViewController: UIViewController {
             if let error = error {
                 UIAlertController.showConfirmAlert(message: error.localizedDescription, in: self)
             } else {
-                print("Time Interval Notification scheduled.")
+                print("Time Interval Notification scheduled: \(requestIdentifier)")
             }
         }
     }
 }
+

@@ -14,7 +14,10 @@ class ViewController: UITableViewController {
     private var settings: UNNotificationSettings?
     
     enum Segue: String {
-        case showAuthorization = "showAuthorization"
+        case showAuthorization
+        case showTimeInterval
+        case showTimeIntervalForeground
+        case showManagement
     }
     
     override func viewDidLoad() {
@@ -34,6 +37,18 @@ class ViewController: UITableViewController {
                 fatalError("The destination should be AuthorizationViewController")
             }
             vc.settings = settings
+        case .showTimeInterval:
+            guard let vc = segue.destination as? TimeIntervalViewController else {
+                fatalError("The destination should be TimeIntervalViewController")
+            }
+            vc.notificationType = .timeInterval
+        case .showTimeIntervalForeground:
+            guard let vc = segue.destination as? TimeIntervalViewController else {
+                fatalError("The destination should be TimeIntervalViewController")
+            }
+            vc.notificationType = .timeIntervalForeground
+        case .showManagement: break
+        
         }
     }
     
