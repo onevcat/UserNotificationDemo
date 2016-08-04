@@ -48,7 +48,7 @@ class AuthorizationViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(updateSettings), name: .UIApplicationWillEnterForeground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateSettings), name: .AppDidReceivedRemoteNotificationDeviceToken, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateNotificationToken), name: .AppDidReceivedRemoteNotificationDeviceToken, object: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -62,8 +62,7 @@ class AuthorizationViewController: UIViewController {
     
     @objc private func updateNotificationToken(notification: Notification) {
         let tokenKey = Notification.Key.AppDidReceivedRemoteNotificationDeviceTokenKey
-         deviceToken = notification.userInfo?[tokenKey] as? String
-        updateSettings()
+        self.deviceToken = notification.userInfo?[tokenKey] as? String
     }
     
     private func updateUI() {

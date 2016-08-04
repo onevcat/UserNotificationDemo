@@ -141,28 +141,8 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Remote Notifications" id="XSm-xF-gfA">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="3bo-hh-3D7">
-                                        <rect key="frame" x="0.0" y="452" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3bo-hh-3D7" id="n2w-Vb-qkk">
-                                            <frame key="frameInset" width="342" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Interval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-wo-HhI">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="I3t-wo-HhI" firstAttribute="centerY" secondItem="n2w-Vb-qkk" secondAttribute="centerY" id="8ri-8a-vlK"/>
-                                                <constraint firstItem="I3t-wo-HhI" firstAttribute="leading" secondItem="n2w-Vb-qkk" secondAttribute="leadingMargin" id="FM8-T5-Cwe"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="I3t-wo-HhI" secondAttribute="trailing" id="isi-Qt-XaW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="xDo-nS-VSF">
-                                        <rect key="frame" x="0.0" y="496" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="452" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xDo-nS-VSF" id="U9c-CS-fWM">
                                             <frame key="frameInset" width="342" height="44"/>
@@ -178,6 +158,26 @@
                                                 <constraint firstItem="rjl-XJ-0Nd" firstAttribute="centerY" secondItem="U9c-CS-fWM" secondAttribute="centerY" id="jxF-D8-d0D"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="rjl-XJ-0Nd" secondAttribute="trailing" id="lOf-Yc-5X9"/>
                                                 <constraint firstItem="rjl-XJ-0Nd" firstAttribute="leading" secondItem="U9c-CS-fWM" secondAttribute="leadingMargin" id="wbe-yh-FcA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Vkg-ub-JDd">
+                                        <rect key="frame" x="0.0" y="496" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vkg-ub-JDd" id="i8G-cc-wJ5">
+                                            <frame key="frameInset" width="342" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAp-JL-8QR">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GAp-JL-8QR" firstAttribute="centerY" secondItem="i8G-cc-wJ5" secondAttribute="centerY" id="8qA-MM-Lqs"/>
+                                                <constraint firstItem="GAp-JL-8QR" firstAttribute="leading" secondItem="i8G-cc-wJ5" secondAttribute="leadingMargin" id="dbb-Jy-rad"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GAp-JL-8QR" secondAttribute="trailing" id="thc-6y-iNd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

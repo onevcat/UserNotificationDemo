@@ -45,6 +45,7 @@ class ViewController: UITableViewController {
                 fatalError("The destination should be AuthorizationViewController")
             }
             vc.settings = settings
+            vc.deviceToken = UserDefaults.standard.object(forKey: "push-token") as? String
         case .showTimeInterval:
             guard let vc = segue.destination as? TimeIntervalViewController else {
                 fatalError("The destination should be TimeIntervalViewController")
