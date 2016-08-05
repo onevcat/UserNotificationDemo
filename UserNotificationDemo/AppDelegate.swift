@@ -67,11 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 textInputButtonTitle: "Send",
                 textInputPlaceholder: "What do you want to say...")
             
-            let helloAction = UNNotificationAction(
-                identifier: SaySomethingCategoryAction.hello.rawValue,
-                title: "Hello",
-                options: [.foreground])
-            
             let goodbyeAction = UNNotificationAction(
                 identifier: SaySomethingCategoryAction.goodbye.rawValue,
                 title: "Goodbye",
@@ -82,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 title: "Cancel",
                 options: [.destructive])
         
-            return UNNotificationCategory(identifier: UserNotificationCategoryType.saySomething.rawValue, actions: [inputAction, helloAction, goodbyeAction, cancelAction], intentIdentifiers: [], options: [.customDismissAction])
+            return UNNotificationCategory(identifier: UserNotificationCategoryType.saySomething.rawValue, actions: [inputAction, goodbyeAction, cancelAction], intentIdentifiers: [], options: [.customDismissAction])
         }()
         
         UNUserNotificationCenter.current().setNotificationCategories([saySomethingCategory])

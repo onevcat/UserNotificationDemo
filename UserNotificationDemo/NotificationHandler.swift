@@ -45,7 +45,6 @@ enum UserNotificationCategoryType: String {
 
 enum SaySomethingCategoryAction: String {
     case input
-    case hello
     case goodbye
     case none
 }
@@ -99,7 +98,6 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
         if let actionType = SaySomethingCategoryAction(rawValue: response.actionIdentifier) {
             switch actionType {
             case .input: text = (response as! UNTextInputNotificationResponse).userText
-            case .hello: text = "Hello"
             case .goodbye: text = "Goodbye"
             case .none: text = ""
             }
