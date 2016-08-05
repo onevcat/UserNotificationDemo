@@ -43,10 +43,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Local Notifications" id="3By-ax-Lg0">
+                            <tableViewSection headerTitle="Notifications" id="3By-ax-Lg0">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="gWj-zO-cNq">
-                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="221" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gWj-zO-cNq" id="x5G-hf-1wO">
                                             <frame key="frameInset" width="342" height="44"/>
@@ -69,7 +69,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="c4Z-Ke-ZIk">
-                                        <rect key="frame" x="0.0" y="264" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="265" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c4Z-Ke-ZIk" id="HgL-Ae-vvE">
                                             <frame key="frameInset" width="342" height="44"/>
@@ -92,7 +92,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="kXB-jh-XBj">
-                                        <rect key="frame" x="0.0" y="308" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="309" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kXB-jh-XBj" id="ioc-xP-Oer">
                                             <frame key="frameInset" width="342" height="44"/>
@@ -115,7 +115,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="tbN-vn-Ct2">
-                                        <rect key="frame" x="0.0" y="352" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="353" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tbN-vn-Ct2" id="n3q-5P-NtO">
                                             <frame key="frameInset" width="342" height="44"/>
@@ -137,32 +137,8 @@
                                             <segue destination="liC-uG-ub9" kind="show" identifier="showActionable" id="lrS-Hv-dTv"/>
                                         </connections>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Remote Notifications" id="XSm-xF-gfA">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="xDo-nS-VSF">
-                                        <rect key="frame" x="0.0" y="452" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xDo-nS-VSF" id="U9c-CS-fWM">
-                                            <frame key="frameInset" width="342" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mutable Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjl-XJ-0Nd">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rjl-XJ-0Nd" firstAttribute="centerY" secondItem="U9c-CS-fWM" secondAttribute="centerY" id="jxF-D8-d0D"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="rjl-XJ-0Nd" secondAttribute="trailing" id="lOf-Yc-5X9"/>
-                                                <constraint firstItem="rjl-XJ-0Nd" firstAttribute="leading" secondItem="U9c-CS-fWM" secondAttribute="leadingMargin" id="wbe-yh-FcA"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Vkg-ub-JDd">
-                                        <rect key="frame" x="0.0" y="496" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="397" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vkg-ub-JDd" id="i8G-cc-wJ5">
                                             <frame key="frameInset" width="342" height="44"/>
@@ -180,6 +156,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="GAp-JL-8QR" secondAttribute="trailing" id="thc-6y-iNd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="w5C-zF-DsH" kind="show" identifier="showMedia" id="ZT7-R4-WBK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -584,6 +563,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9B2-xK-1Th" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-36" y="-212"/>
+        </scene>
+        <!--Media View Controller-->
+        <scene sceneID="O9b-Ox-Cji">
+            <objects>
+                <viewController id="w5C-zF-DsH" customClass="MediaViewController" customModule="UserNotificationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cRD-dj-dHd"/>
+                        <viewControllerLayoutGuide type="bottom" id="JW0-SW-Dn3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eWa-b0-9cv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7l-ss-fRU">
+                                <state key="normal" title="Tap Me"/>
+                                <connections>
+                                    <action selector="notificationButtonPressed:" destination="w5C-zF-DsH" eventType="touchUpInside" id="pvF-dW-Fr4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show a notification with image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTN-g0-Yw2">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pTN-g0-Yw2" firstAttribute="trailing" secondItem="eWa-b0-9cv" secondAttribute="trailingMargin" id="KYp-ZN-lf2"/>
+                            <constraint firstItem="pTN-g0-Yw2" firstAttribute="top" secondItem="cRD-dj-dHd" secondAttribute="bottom" constant="20" id="Q9G-76-vDW"/>
+                            <constraint firstItem="n7l-ss-fRU" firstAttribute="centerX" secondItem="eWa-b0-9cv" secondAttribute="centerX" id="R00-J3-o7D"/>
+                            <constraint firstItem="n7l-ss-fRU" firstAttribute="top" secondItem="pTN-g0-Yw2" secondAttribute="bottom" constant="16" id="V7D-Ka-aiD"/>
+                            <constraint firstItem="pTN-g0-Yw2" firstAttribute="leading" secondItem="eWa-b0-9cv" secondAttribute="leadingMargin" id="VkU-U9-ftd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aa5-bv-3a1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YD2-lf-31V">

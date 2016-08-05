@@ -17,6 +17,8 @@ enum UserNotificationType: String {
     case deliveredRemoval
     case deliveredUpdate
     case actionable
+    case mutableContent
+    case media
 }
 
 extension UserNotificationType {
@@ -73,6 +75,8 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
         case .deliveredUpdate:
             options = [.alert, .sound]
         case .actionable:
+            options = [.alert, .sound]
+        case .media:
             options = [.alert, .sound]
         default:
             options = []

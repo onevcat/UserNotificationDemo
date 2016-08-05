@@ -20,11 +20,16 @@ class ViewController: UITableViewController {
         case showTimeIntervalForeground
         case showManagement
         case showActionable
+        case showMedia
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         UNUserNotificationCenter.current().getNotificationSettings {
             settings in
             if settings.authorizationStatus == .authorized {
@@ -58,12 +63,16 @@ class ViewController: UITableViewController {
             vc.notificationType = .timeIntervalForeground
         case .showManagement: break
         case .showActionable: break
-        
+        case .showMedia: break
         }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: AnyObject?) -> Bool {
-        if settings == nil {
+        if identifier == Segue.showAuthorization.rawValue {
+            return true
+        }
+        
+        guard let settings = settings, settings.authorizationStatus == .authorized else {
             return false
         }
         return true
