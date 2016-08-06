@@ -19,6 +19,7 @@ enum UserNotificationType: String {
     case actionable
     case mutableContent
     case media
+    case customUI
 }
 
 extension UserNotificationType {
@@ -43,12 +44,19 @@ extension UserNotificationType {
 
 enum UserNotificationCategoryType: String {
     case saySomething
+    case customUI
 }
 
 enum SaySomethingCategoryAction: String {
     case input
     case goodbye
     case none
+}
+
+enum CustomizeUICategoryAction: String {
+    case `switch`
+    case open
+    case dismiss
 }
 
 class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
@@ -91,6 +99,8 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
             switch category {
             case .saySomething:
                 handleSaySomthing(response: response)
+            case .customUI:
+                handleCustomUI(response: response)
             }
         }
         completionHandler()
@@ -113,6 +123,10 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
         if !text.isEmpty {
             UIAlertController.showConfirmAlertFromTopViewController(message: "You just said \(text)")
         }
+    }
+    
+    private func handleCustomUI(response: UNNotificationResponse) {
+        print(response.actionIdentifier)
     }
 }
 

@@ -80,7 +80,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return UNNotificationCategory(identifier: UserNotificationCategoryType.saySomething.rawValue, actions: [inputAction, goodbyeAction, cancelAction], intentIdentifiers: [], options: [.customDismissAction])
         }()
         
-        UNUserNotificationCenter.current().setNotificationCategories([saySomethingCategory])
+        let customUICategory: UNNotificationCategory = {
+            let nextAction = UNNotificationAction(
+                identifier: CustomizeUICategoryAction.switch.rawValue,
+                title: "Switch",
+                options: [])
+            let openAction = UNNotificationAction(
+                identifier: CustomizeUICategoryAction.open.rawValue,
+                title: "Open",
+                options: [.foreground])
+            let dismissAction = UNNotificationAction(
+                identifier: CustomizeUICategoryAction.dismiss.rawValue,
+                title: "Dismiss",
+                options: [.destructive])
+            return UNNotificationCategory(identifier: UserNotificationCategoryType.customUI.rawValue, actions: [nextAction, openAction, dismissAction], intentIdentifiers: [], options: [])
+        }()
+        
+        UNUserNotificationCenter.current().setNotificationCategories([saySomethingCategory, customUICategory])
     }
 
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4B1423A71D51AC4C00BB8943 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1423A61D51AC4C00BB8943 /* Delay.swift */; };
-		4B25101C1D546D1B00DC3173 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B25101B1D546D1B00DC3173 /* image.jpg */; };
 		4B3ED4D71D518BB60082C70C /* TimeIntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4D61D518BB60082C70C /* TimeIntervalViewController.swift */; };
 		4B3ED4DA1D518D870082C70C /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4D91D518D870082C70C /* UIAlertControllerExtension.swift */; };
 		4B3ED4DC1D51907E0082C70C /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED4DB1D51907E0082C70C /* NotificationHandler.swift */; };
@@ -28,6 +27,9 @@
 		4BC8CB071D54529A00249098 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8CB061D54529A00249098 /* NotificationService.swift */; };
 		4BC8CB0B1D54529A00249098 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4BC8CB041D54529A00249098 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4BC8CB121D54592B00249098 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8CB111D54592B00249098 /* MediaViewController.swift */; };
+		4BD405271D548BB800C07C01 /* CustomizeUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD405261D548BB800C07C01 /* CustomizeUIViewController.swift */; };
+		4BD405291D548EC500C07C01 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BD405281D548EC500C07C01 /* image.jpg */; };
+		4BD4052B1D548EFF00C07C01 /* onevcat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4052A1D548EFF00C07C01 /* onevcat.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +67,6 @@
 /* Begin PBXFileReference section */
 		4B040A0E1D5043230037C6BF /* UserNotificationDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UserNotificationDemo.entitlements; sourceTree = "<group>"; };
 		4B1423A61D51AC4C00BB8943 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
-		4B25101B1D546D1B00DC3173 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image.jpg; path = ../../../../Desktop/image.jpg; sourceTree = "<group>"; };
 		4B3ED4D61D518BB60082C70C /* TimeIntervalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalViewController.swift; sourceTree = "<group>"; };
 		4B3ED4D91D518D870082C70C /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		4B3ED4DB1D51907E0082C70C /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
@@ -90,6 +91,9 @@
 		4BC8CB081D54529A00249098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BC8CB111D54592B00249098 /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		4BD405251D54802100C07C01 /* UserNotification-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserNotification-Bridging.h"; sourceTree = "<group>"; };
+		4BD405261D548BB800C07C01 /* CustomizeUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizeUIViewController.swift; sourceTree = "<group>"; };
+		4BD405281D548EC500C07C01 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		4BD4052A1D548EFF00C07C01 /* onevcat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = onevcat.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 				4B3ED4DF1D5196240082C70C /* ManagementViewController.swift */,
 				4B4B957F1D51B9E0002ECA08 /* ActionableViewController.swift */,
 				4BC8CB111D54592B00249098 /* MediaViewController.swift */,
+				4BD405261D548BB800C07C01 /* CustomizeUIViewController.swift */,
 			);
 			name = DetailViewControllers;
 			sourceTree = "<group>";
@@ -164,7 +169,8 @@
 		4B8E8E541D504184007BFBAF /* UserNotificationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4B25101B1D546D1B00DC3173 /* image.jpg */,
+				4BD405281D548EC500C07C01 /* image.jpg */,
+				4BD4052A1D548EFF00C07C01 /* onevcat.jpg */,
 				4B3ED4D81D518D750082C70C /* Extensions */,
 				4B040A0E1D5043230037C6BF /* UserNotificationDemo.entitlements */,
 				4B8E8E551D504184007BFBAF /* AppDelegate.swift */,
@@ -329,7 +335,8 @@
 				4B8E8E601D504184007BFBAF /* LaunchScreen.storyboard in Resources */,
 				4B8E8E5D1D504184007BFBAF /* Assets.xcassets in Resources */,
 				4B8E8E5B1D504184007BFBAF /* Main.storyboard in Resources */,
-				4B25101C1D546D1B00DC3173 /* image.jpg in Resources */,
+				4BD4052B1D548EFF00C07C01 /* onevcat.jpg in Resources */,
+				4BD405291D548EC500C07C01 /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +368,7 @@
 				4B3ED4DC1D51907E0082C70C /* NotificationHandler.swift in Sources */,
 				4B874F3B1D5074ED00BC7018 /* AuthorizationViewController.swift in Sources */,
 				4B3ED4DA1D518D870082C70C /* UIAlertControllerExtension.swift in Sources */,
+				4BD405271D548BB800C07C01 /* CustomizeUIViewController.swift in Sources */,
 				4B4B95801D51B9E0002ECA08 /* ActionableViewController.swift in Sources */,
 				4B1423A71D51AC4C00BB8943 /* Delay.swift in Sources */,
 				4B8E8E581D504184007BFBAF /* ViewController.swift in Sources */,
