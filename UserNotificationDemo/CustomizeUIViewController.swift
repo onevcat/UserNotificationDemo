@@ -31,10 +31,6 @@ class CustomizeUIViewController: UIViewController {
             return nil
         }
         
-        if #available(iOS 10.0, *) {
-            
-        }
-        
         content.attachments = attachments
         content.userInfo = ["items": [["title": "Photo 1", "text": "Cute girl"], ["title": "Photo 2", "text": "Cute cat"]]]
         
