@@ -67,7 +67,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         self.index = index
     }
 
-    func didReceive(_ response: UNNotificationResponse, completionHandler completion: (UNNotificationContentExtensionResponseOption) -> Void) {
+    func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
         if response.actionIdentifier == "switch" {
             let nextIndex: Int
             if index == 0 {

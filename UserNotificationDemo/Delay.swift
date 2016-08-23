@@ -8,7 +8,7 @@
 
 import Foundation
 
-func delay(_ timeInterval: TimeInterval, _ block: ()->Void) {
+func delay(_ timeInterval: TimeInterval, _ block: @escaping ()->Void) {
     let after = DispatchTime.now() + timeInterval
     DispatchQueue.main.asyncAfter(deadline: after, execute: block)
 }
